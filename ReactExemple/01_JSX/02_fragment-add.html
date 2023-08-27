@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>FragmentAdd</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const user ={ 
+            name:"홍련아~",
+            address: '장기동1004'
+        };
+
+        //리엑트 (엘리먼트안에) 프래그먼트 <>,</> 를 추가하시구랴!!
+        
+        const {Fragment} = React;
+        const element = (
+            <Fragment>
+                <h1> Hellow : {user.name}</h1>
+                <h1> address : {user.address + "로 찾아갈게!"}</h1>
+            </Fragment>
+        );
+        ReactDOM.createRoot(document.getElementById("root")).render(element);
+    </script>
+</body>
+</html>
